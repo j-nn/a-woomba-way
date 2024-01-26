@@ -5,11 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A-Woomba-Way</title>
+    <style id="theme-style">
+        body {
+            background-color: #000000;
+            color: white;
+        }
+    </style>
+    <script>
+        function toggleTheme() {
+            const body = document.body;
+            const themeStyle = document.getElementById('theme-style');
+
+            if (body.classList.contains('dark-mode')) {
+                body.classList.remove('dark-mode');
+                themeStyle.innerHTML = 'body { background-color: #ffffff; color: black; }';
+            } else {
+                body.classList.add('dark-mode');
+                themeStyle.innerHTML = 'body { background-color: #000000; color: white; }';
+            }
+        }
+    </script>
 </head>
 
-<body style="background-color: #000000; color: white;">
+<body>
     <h1>Welcome to A Woomba Way 👋👋👋‼️‼️</h1>
-    
+
     <!-- le video -->
     <iframe width="560" height="315" src="https://www.youtube.com/embed/4dHVERFC2Ms?si=TnbeFUZPwo5lVgWo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -20,6 +40,9 @@
         <p>💻 ~ I did the editing, dancing, and singing! </p>
         <p>⚠️ Warning there are flashing lights oww ⚠️</p>
     </div>
+
+    <!-- light and dark mode -->
+    <button onclick="toggleTheme()">☀️/🌙</button>
 </body>
 
 </html>
